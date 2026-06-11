@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaima | Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8ff;
+color:#222;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0d1b2a;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav ul li a:hover{
+color:#87ceeb;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0d1b2a,#1b263b,#415a77);
+color:white;
+text-align:center;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#00b4d8;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0077b6;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+color:#0d1b2a;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.skill{
+background:#0d1b2a;
+color:white;
+padding:15px;
+margin:10px;
+border-radius:10px;
+text-align:center;
+}
+
+.skills-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:80%;
+padding:15px;
+margin:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.contact button{
+padding:12px 30px;
+border:none;
+background:#0d1b2a;
+color:white;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+background:#0d1b2a;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px;
+border:none;
+border-radius:50%;
+background:#0077b6;
+color:white;
+cursor:pointer;
+display:none;
+}
+
+@media(max-width:768px){
+
+nav{
+padding:15px;
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>Shaima</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<img src="https://via.placeholder.com/180" alt="profile">
+
+<h1>Shaima</h1>
+
+<p id="typing"></p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+Hello! I am <b>Shaima</b>, a Physics Graduate and an Aspiring Software Developer. I am passionate about technology, web development, and building innovative digital solutions that solve real-world problems.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Bachelor's Degree</h3>
+<p>Physics Graduate</p>
+</div>
+
+<div class="card">
+<h3>Current Training</h3>
+<p>Software Development</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills-box">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">Flutter</div>
+<div class="skill">Firebase</div>
+<div class="skill">GitHub</div>
+<div class="skill">Problem Solving</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Local Worker Finder App</h3>
+<p>Find trusted local workers easily.</p>
+</div>
+
+<div class="card">
+<h3>DecorNest</h3>
+<p>Home Decor Shopping Application.</p>
+</div>
+
+<div class="card">
+<h3>Study Material App</h3>
+<p>Educational platform for students.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<br>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Designed by Shaima</h3>
+
+<p>Physics Graduate | Aspiring Software Developer</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script>
+
+var text="Physics Graduate | Aspiring Software Developer";
+
+var i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,80);
+
+}
+
+}
+
+typing();
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+
+document.getElementById("topBtn").style.display="block";
+
+}else{
+
+document.getElementById("topBtn").style.display="none";
+
+}
+
+};
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+function sendMessage(){
+
+alert("Thank you for contacting me!");
+
+}
+
+</script>
+
+</body>
+</html>
